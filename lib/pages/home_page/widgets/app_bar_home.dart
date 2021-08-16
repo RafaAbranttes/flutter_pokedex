@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pokedexapp/const/const_app.dart';
 
 class AppbarHomeWidget extends StatelessWidget {
-  const AppbarHomeWidget({Key? key}) : super(key: key);
+  
 
   @override
   Widget build(BuildContext context) {
@@ -12,8 +12,9 @@ class AppbarHomeWidget extends StatelessWidget {
 
     return Container(
             padding: EdgeInsets.symmetric(
-                horizontal: screenWidth * 0.04, vertical: screenHeight * 0.05),
+                horizontal: screenWidth * 0.04),
             child: Container(
+              
               alignment: Alignment.topLeft,
               child: Column(
                 children: [
@@ -24,6 +25,7 @@ class AppbarHomeWidget extends StatelessWidget {
                         Row(
                           children: [
                             Container(
+                              margin: EdgeInsets.only(top: screenHeight * 0.1),
                               child: Image.asset(
                                 ConstApp.pokedexLogo,
                                 width: screenHeight * 0.22,

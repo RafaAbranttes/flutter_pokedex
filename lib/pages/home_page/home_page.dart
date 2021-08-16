@@ -5,7 +5,7 @@ import 'package:pokedexapp/const/const_app.dart';
 import 'package:pokedexapp/pages/home_page/widgets/app_bar_home.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +27,17 @@ class HomePage extends StatelessWidget {
             ),
           ),
           AppbarHomeWidget(),
+          Container(
+            margin: EdgeInsets.only(top: screenWidth * 0.55),
+            height: 100,
+            decoration: BoxDecoration(
+              color: Color.fromRGBO(238, 27, 36, 0.7),
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(45),
+                topRight: Radius.circular(45),
+              ),
+            ),
+          ),
         ],
       ),
     );
