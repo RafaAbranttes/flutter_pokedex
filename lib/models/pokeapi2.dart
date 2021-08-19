@@ -34,6 +34,7 @@ class PokeApiV2 {
 
   PokeApiV2.fromJson(Map<String, dynamic> json) {
     if (json['abilities'] != null) {
+      // ignore: deprecated_member_use
       abilities = new List<Abilities>();
       json['abilities'].forEach((v) {
         abilities.add(new Abilities.fromJson(v));
@@ -41,6 +42,7 @@ class PokeApiV2 {
     }
     baseExperience = json['base_experience'];
     if (json['game_indices'] != null) {
+      // ignore: deprecated_member_use
       gameIndices = new List<GameIndices>();
       json['game_indices'].forEach((v) {
         gameIndices.add(new GameIndices.fromJson(v));
@@ -51,6 +53,7 @@ class PokeApiV2 {
     isDefault = json['is_default'];
     locationAreaEncounters = json['location_area_encounters'];
     if (json['moves'] != null) {
+      // ignore: deprecated_member_use
       moves = new List<Moves>();
       json['moves'].forEach((v) {
         moves.add(new Moves.fromJson(v));
@@ -61,12 +64,14 @@ class PokeApiV2 {
     species =
         json['species'] != null ? new Ability.fromJson(json['species']) : null;
     if (json['stats'] != null) {
+      // ignore: deprecated_member_use
       stats = new List<Stats>();
       json['stats'].forEach((v) {
         stats.add(new Stats.fromJson(v));
       });
     }
     if (json['types'] != null) {
+      // ignore: deprecated_member_use
       types = new List<Types>();
       json['types'].forEach((v) {
         types.add(new Types.fromJson(v));
@@ -182,6 +187,7 @@ class Moves {
   Moves.fromJson(Map<String, dynamic> json) {
     move = json['move'] != null ? new Ability.fromJson(json['move']) : null;
     if (json['version_group_details'] != null) {
+      // ignore: deprecated_member_use
       versionGroupDetails = new List<VersionGroupDetails>();
       json['version_group_details'].forEach((v) {
         versionGroupDetails.add(new VersionGroupDetails.fromJson(v));
