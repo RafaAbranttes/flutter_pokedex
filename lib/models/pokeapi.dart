@@ -5,6 +5,7 @@ class PokeAPI {
 
   PokeAPI.fromJson(Map<String, dynamic> json) {
     if (json['pokemon'] != null) {
+      // ignore: deprecated_member_use
       pokemon = new List<Pokemon>();
       json['pokemon'].forEach((v) {
         pokemon.add(new Pokemon.fromJson(v));
@@ -58,12 +59,14 @@ class Pokemon {
     candy = json['candy'];
     egg = json['egg'];
     if (json['next_evolution'] != null) {
+      // ignore: deprecated_member_use
       nextEvolution = new List<NextEvolution>();
       json['next_evolution'].forEach((v) {
         nextEvolution.add(new NextEvolution.fromJson(v));
       });
     }
     if (json['prev_evolution'] != null) {
+      // ignore: deprecated_member_use
       prevEvolution = new List<PrevEvolution>();
       json['prev_evolution'].forEach((v) {
         prevEvolution.add(new PrevEvolution.fromJson(v));
