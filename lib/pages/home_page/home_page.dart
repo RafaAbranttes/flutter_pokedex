@@ -126,7 +126,8 @@ class _HomePageState extends State<HomePage> {
                                                       tag: pokemon.num,
                                                       child: Container(
                                                         margin: EdgeInsets.only(
-                                                            left: 40, top: 40),
+                                                            left: 50, top: 50),
+                                                        padding: EdgeInsets.all(8.0),
                                                         child: pokeApiStore
                                                             .getImage(
                                                                 numero: pokemon
